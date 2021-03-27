@@ -6,10 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titolo</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5f7e6719bd.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function() {
+            $('#hide').click(function(){
+                $("p").hide(1000);
+            });
+            $("#show").click(function(){
+                $("p").show(3000);
+            });
+            $("#azione").click(function(){
+                    $(".blocco-2").fadeToggle(1000);
+            });
+            $("#btn1").dblclick(function(){
+                $(".blocco-4").fadeTo("slow", 0.4);
+            });
+            $(".header").click(function(){
+                $(".panel").slideToggle("slow");
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="header">
         <p>area header</p>
+    <div class="panel">
+
+    </div>
+    </div>
+    <div class="blocco"> 
+
+        <p> testo del blocco primo STATICO </p>
+    </div>
+    <div class="blocco-relativo">
+        <p>testo del blocco relativo </p>
+    </div>
+    <div class="fisso">
+        <p>testo del blocco fisso</p>
+    </div>
+    <div class="assoluto">
+        <p>qui abbiamo il testo del posizionamento asosluto</p>
     </div>
     <div class="content">
         <h1>titolo</h1>
@@ -18,15 +56,54 @@
             <p>testo del blocco uno</p>
         </div>
         <div class="blocco-2">
-            <p>testo del blocco DUE</p>
+            <p><a href="#" style="background-color:#fff;font-size:24px">testo del blocco DUE</a></p>
         </div>
         <div class="blocco-3">
-            <p id="contenuto">testo</p>
+            <p id="contenuto-3">testo</p>
+            <ul class="alfa">
+                <li> <i class="fas fa-cloud">prova di testo per scrivere qualcosa di diverso dal solito </i></li>
+                <li>prova di testo per scrivere qualcosa di diverso dal solito </li>
+                <li>prova di testo per scrivere qualcosa di diverso dal solito </li>
+                <li>prova di testo per scrivere qualcosa di diverso dal solito </li>
+            </ul>
         </div>
+        <div class="blocco-4">
+            <p id="contenuto-4">contenuto 3</p>
+            <p id="contenuto-4-bis">contenuto 4 BIS</p>
+        </div>
+    </div>
+    <div class="area-table" style="overflow-x:auto">
+        <table id="customers">
+            <tr>
+                <th>Nome</th>
+           <th>Cognome</th>
+           <th>Email</th>
+        </tr>
+           <tr> 
+               <td>Luca</td>
+               <td>Rulvoni</td>
+               <td>lrulvoni@gmail.com</td>
+           </tr>
+           <tr> 
+            <td>Luca</td>
+            <td>Rulvoni</td>
+            <td>lrulvoni@gmail.com</td>       
+        </tr>
+        <td>Luca</td>
+        <td>Rulvoni</td>
+        <td>lrulvoni@gmail.com</td>
+           
+        </table>
     </div>
     <div class="footer">
         <h1>titolo footer</h1>
         <p>area footer</p>
+        <button id="hide">NASCONDI</button>
+        <button id="show">MOSTRA DI NUOVO</button>
+        <button id="azione">AZIONE CON TOGGLE</button>
+        <button id="btn1">AZIONE CON TOGGLE</button>
+        <button id="left">LEFT</button>
+        <button id="right">RIGHT</button>
     </div>
 </body>
 </html>
